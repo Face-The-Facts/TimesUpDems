@@ -38,11 +38,11 @@ private const val INTERACTIVE_UPDATE_RATE_MS = 1000
  */
 private const val MSG_UPDATE_TIME = 0
 
-private const val HOUR_STROKE_WIDTH = 15f
-private const val MINUTE_STROKE_WIDTH = 9f
-private const val SECOND_TICK_STROKE_WIDTH = 6f
+private const val HOUR_STROKE_WIDTH = 12f
+private const val MINUTE_STROKE_WIDTH = 8f
+private const val SECOND_TICK_STROKE_WIDTH = 5f
 
-private const val CENTER_GAP_AND_CIRCLE_RADIUS = 12f
+private const val CENTER_GAP_AND_CIRCLE_RADIUS = 10f
 
 private const val SHADOW_RADIUS = 6f
 
@@ -145,7 +145,7 @@ class MyWatchFace : CanvasWatchFaceService() {
             Palette.from(mBackgroundBitmap).generate {
                 it?.let {
                     mWatchHandHighlightColor = it.getVibrantColor(Color.RED)
-                    mWatchHandColor = it.getLightVibrantColor(Color.WHITE)
+                    mWatchHandColor = Color.WHITE
                     mWatchHandShadowColor = it.getDarkMutedColor(Color.BLACK)
                     updateWatchHandStyle()
                 }
@@ -253,7 +253,7 @@ class MyWatchFace : CanvasWatchFaceService() {
                 mSecondPaint.color = mWatchHandColor
                 mTickAndCirclePaint.color = mWatchHandColor
 
-                mHourPaint.isAntiAlias = false
+                mHourPaint.isAntiAlias = true
                 mMinutePaint.isAntiAlias = true
                 mSecondPaint.isAntiAlias = true
                 mTickAndCirclePaint.isAntiAlias = true
