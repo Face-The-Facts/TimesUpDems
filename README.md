@@ -6,5 +6,5 @@ The woke Dems:
 
 The sleeple Dems:
 
-![Sheeple Dems](Sheeple-Dems.png)
+![Sheeple Dems](Sleeple-Dems.png)
 
